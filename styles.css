@@ -81,3 +81,168 @@ footer { padding:24px; background:#101a2a; color:#cfd5df; text-align:center; fon
   .card-grid,.three-columns,.skills-grid,.quick-facts,.contact-card { grid-template-columns:1fr; }
   .about-card,.card,.skill-card,.contact-card { padding:24px; }
 }
+
+/* ================================
+   Assignment 2: JavaScript features
+   ================================ */
+
+.theme-toggle {
+  margin-left: auto;
+  margin-right: 22px;
+  padding: 8px 13px;
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.welcome-message {
+  min-height: 28px;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.section-toggle,
+.details-button,
+.form-button {
+  border: 0;
+  border-radius: 7px;
+  background: var(--navy);
+  color: var(--white);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.section-toggle {
+  margin: -18px 0 26px;
+  padding: 9px 16px;
+}
+
+.details-button {
+  margin-top: 18px;
+  padding: 9px 14px;
+}
+
+.project-details {
+  margin-top: 14px;
+  padding: 16px;
+  border-left: 3px solid var(--gold);
+  border-radius: 5px;
+  background: var(--white);
+}
+
+.contact-form {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+
+.contact-form h3 {
+  margin-bottom: 13px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 11px;
+  font-size: .86rem;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 7px;
+  background: rgba(255,255,255,.08);
+  color: var(--white);
+  font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #c9d0da;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.form-error {
+  display: block;
+  min-height: 18px;
+  margin-top: 2px;
+  color: #ffd4d4;
+  font-size: .78rem;
+}
+
+.form-button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: var(--gold);
+  color: #101a2a;
+}
+
+.form-status {
+  min-height: 24px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* Dark mode is applied by JavaScript to the body element. */
+body.dark-mode {
+  --cream: #101827;
+  --white: #182338;
+  --navy: #eef2f7;
+  --navy-light: #d4dbe5;
+  --text: #e7ebf0;
+  --muted: #b4bdca;
+  --border: #334158;
+  --gold-light: #4b3d2c;
+  --shadow: 0 18px 45px rgba(0,0,0,.25);
+}
+
+body.dark-mode .site-header {
+  background: rgba(16,24,39,.96);
+}
+
+body.dark-mode .logo,
+body.dark-mode .primary-button,
+body.dark-mode .section-toggle,
+body.dark-mode .details-button {
+  background: var(--gold);
+  color: #101827;
+}
+
+body.dark-mode .theme-toggle {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+body.dark-mode .contact-card {
+  background: #0c1320;
+}
+
+body.dark-mode footer {
+  background: #080d16;
+}
+
+body.dark-mode .profile-frame img {
+  box-shadow: 0 18px 45px rgba(0,0,0,.35);
+}
+
+@media (max-width: 680px) {
+  .theme-toggle {
+    order: 3;
+    margin: 0;
+  }
+}

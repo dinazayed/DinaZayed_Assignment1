@@ -11,6 +11,7 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a class="logo" href="#home">DZ</a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch between dark and light mode">Dark Mode</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -25,6 +26,7 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
+        <div id="welcomeMessage" class="welcome-message" role="status"></div>
         <p class="eyebrow">Personal CV &amp; Portfolio</p>
         <h1>Dina Zayed</h1>
         <h2>Business Administration Student | MICT &amp; Economics</h2>
@@ -39,7 +41,7 @@
         </div>
       </div>
       <div class="profile-frame">
-        <img src="profile.png" alt="Profile photo of Dina Zayed">
+        <img src="images/profile.png" alt="Profile photo of Dina Zayed">
       </div>
     </section>
 
@@ -134,6 +136,14 @@
               <li>Developing branding, packaging concepts, and supplier partnerships.</li>
               <li>Planning digital marketing strategies for brand launch and customer acquisition.</li>
             </ul>
+            <button id="projectToggle" class="details-button" type="button"
+                    aria-expanded="false" aria-controls="projectDetails">Show Project Details</button>
+            <div id="projectDetails" class="project-details" hidden>
+              <p>
+                This ongoing entrepreneurial project combines market research, branding,
+                supplier planning, and digital marketing to prepare the dress brand for launch.
+              </p>
+            </div>
           </div>
         </article>
       </div>
@@ -144,6 +154,8 @@
         <p class="section-number">04</p>
         <div><p class="eyebrow">Capabilities</p><h2>Skills</h2></div>
       </div>
+      <button id="skillsToggle" class="section-toggle" type="button" aria-expanded="true" aria-controls="skillsContent">Hide Skills</button>
+      <div id="skillsContent">
       <div class="skills-grid">
         <article class="skill-card"><h3>Business &amp; Analytical</h3><div class="tags">
           <span>Project Management</span><span>Market Research</span><span>Client Relations</span>
@@ -194,16 +206,38 @@
           <h2>Contact Information</h2>
           <p>Feel free to contact me by email or connect with me on LinkedIn.</p>
         </div>
-        <div class="contact-links">
-          <a href="mailto:dinazayed24@gmail.com">dinazayed24@gmail.com</a>
-          <a href="mailto:dinazayed_@aucegypt.edu">dinazayed_@aucegypt.edu</a>
-          <a href="https://www.linkedin.com/in/dina-zayed-801b7b383"
-             target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        <div>
+          <div class="contact-links">
+            <a href="mailto:dinazayed24@gmail.com">dinazayed24@gmail.com</a>
+            <a href="mailto:dinazayed_@aucegypt.edu">dinazayed_@aucegypt.edu</a>
+            <a href="https://www.linkedin.com/in/dina-zayed-801b7b383"
+               target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+          </div>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <h3>Send a Message</h3>
+
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" placeholder="Your name">
+            <small id="nameError" class="form-error"></small>
+
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" placeholder="you@example.com">
+            <small id="emailError" class="form-error"></small>
+
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="4" placeholder="Write your message"></textarea>
+            <small id="messageError" class="form-error"></small>
+
+            <button class="form-button" type="submit">Send Message</button>
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
   <footer><p>&copy; 2026 Dina Zayed. Personal CV Webpage.</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>
